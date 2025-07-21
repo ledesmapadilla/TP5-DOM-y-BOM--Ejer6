@@ -8,3 +8,7 @@ main{
   flex-grow: 1;
 }
 
+article{
+  margin-top: 60px;
+  font-size: 100px;
+}
