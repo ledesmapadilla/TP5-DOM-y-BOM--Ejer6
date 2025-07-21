@@ -13,8 +13,12 @@ const segundoInicio = parseInt(
 
 const segundosTotales = horaInicio * 3600 + (minutoInicio * 60 + segundoInicio);
 
+let contador = segundosTotales;
+textContador.textContent = contador
+
 console.log(segundosTotales);
 
+console.log(textContador);
 /* deshabilitar botones */
 
 const deshabilitarBotones = () => {
@@ -24,9 +28,10 @@ const deshabilitarBotones = () => {
 deshabilitarBotones();
 
 /* agregar funcionalidad - iniciar contador */
-let contador = segundosTotales;
+
 let idInterval;
 
+console.log(textContador);
 btnIniciar.addEventListener(`click`, () => {
   /* habilitar boton pausar */
   btnPausar.disabled = false;
@@ -45,7 +50,7 @@ btnIniciar.addEventListener(`click`, () => {
     if (contador <= 0) {
       btnPausar.disabled = true;
       btnResetear.disabled = true;
-      textContador.textContent = `Fin`
+      textContador.textContent = `Fin`;
 
       clearInterval(idInterval);
     }
